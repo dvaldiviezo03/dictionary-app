@@ -9,30 +9,45 @@
 </head>
 
 <body>
-    <div id="calculator">
-        <input id="display" readonly>
-        <div id="keys">
-            <button onclick="appendToDisplay('+')">+</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('-')">-</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('*')">*</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('\')">\</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="clearDisplay()">C</button>
-
+    <div class="container">
+        <h1>Dictionary</h1>
+        <form action="#" class="search-box" id="search-box">
+            <input type="text" name="search-input" id="search-input" placeholder="Search for a word">
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M9.5 3C5.36 3 2 6.36 2 10.5S5.36 18 9.5 18c2.21 0 4.21-.9 5.66-2.34l4.79 4.79c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-4.79-4.79C15.1 13.71 16 11.71 16 9.5c0-4.14-3.36-7.5-7.5-7.5zM9.5 16C6.46 16 4 13.54 4 10.5S6.46 5 9.5 5s5.5 2.46 5.5 5.5S12.54 16 9.5 16z" />
+                </svg>
+            </button>
+        </form>
+        <p class="error-message"></p>
+        <div class="word-details">
+            <div class="word-info">
+                <div class="word-name">
+                    <h2 id="word-text">play</h2>
+                    <p>
+                        <span id="type-text">noun</span>
+                        <span id="phonetic-text">/pleɪ/</span>
+                    </p>
+                </div>
+                <button type="button" id="sound-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 26 26">
+                        <path fill="currentColor"
+                            d="M12 3.5C6.48 3.5 2 7.98 2 13.5S6.48 23.5 12 23.5s10-4.48 10-10-4.48-10-10-10zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                    </svg>
+                </button>
+            </div>
+            <p class="definition" id="definition-text">Activity for amusement only,
+                especially among the young.</p>
+            <div class="blockquote" id="example-text">
+                <h3>Examples</h3>
+                <p>Children learn through play.</p>
+            </div>
         </div>
-
     </div>
+
+
+
 
     <script src="script.js"></script>
 </body>
