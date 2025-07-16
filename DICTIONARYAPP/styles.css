@@ -18,3 +18,107 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 10px;
 }
+
+.container {
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(22, 22, 22, .5);
+    width: 100%;
+    max-width: 450px;
+}
+
+.container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.container form :where(input, button) {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0.5rem;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.container form input {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+.container form input:focus {
+    border-color: white;
+    box-shadow: 0 0 5px white;
+}
+
+.container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #00B4DB;
+    padding: 0.5rem;
+    font-size: 16px;
+    transition: .3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background: #006586;
+    color: #fafafa;
+}
+
+.container .word-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.container .word-info h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.container .word-info p {
+    color: #888;
+}
+
+.container .blockquote {
+    border-left: 5px solid #00B4DB;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+.container .blockquote h3 {
+    font-weight: 500;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container .word-details {
+    display: none;
+}
+
+.container .word-details.active {
+    display: block;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.error-message:empty {
+    margin-top: 0;
+}

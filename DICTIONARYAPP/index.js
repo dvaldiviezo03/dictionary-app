@@ -1,0 +1,5 @@
+const searchBox = document.getElementById("search-box")
+const searchInput = document.getElementById("search-input")
+const wordText = document.getElementById("word-text")
+const typeText = document.getElementById("type-text")
+const phoneticText = document.getElementById("phonetic-text")
