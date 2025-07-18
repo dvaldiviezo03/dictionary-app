@@ -19,8 +19,8 @@ async function getWordDetails(word) {
     let phoneticText = "", phoneticAudio = "";
 
     for (const phonetic of phonetics) {
-        if (phonetic.text && !localPhoneticText)
-            localPhoneticText = phonetic.text;
+        if (phonetic.text && !phoneticText)
+            phoneticText = phonetic.text;
         if (phonetic.audio && !phoneticAudio)
             phoneticAudio = phonetic.audio;
         if (phoneticText && phoneticAudio) break;
@@ -31,7 +31,7 @@ async function getWordDetails(word) {
     return {
         word: word.toLowerCase(),
         phonetic: {
-            text: localPhoneticText,
+            text: phoneticText,
             audio: phoneticAudio
         },
         speechPart: meaning.partOfSpeech,
